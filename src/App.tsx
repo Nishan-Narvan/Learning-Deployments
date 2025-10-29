@@ -11,7 +11,7 @@ import Button from './components/Button'
 
 
 function App() {
-  const [on, setOn] = useState(true)
+  const [on, setOn] = useState(false)
     const [notif, setNotif] = useState(false)
 
   return (

@@ -3,17 +3,17 @@ import Button from "./Button";
 
 const NewCourses = ({setOn}:{setOn: React.Dispatch<React.SetStateAction<boolean>>}) => {
   return (
-    <section className="md:max-w-5xl sm:max-w-xl mx-auto p-6 py-8 h-screen font-instrument">
+    <section className="md:max-w-5xl sm:max-w-xl mx-auto p-6 py-2 h-screen font-instrument mb-5 ">
       {/* ✅ Clean heading */}
       <h1 className="text-2xl font-semibold text-center mb-10">
         New Courses
       </h1>
 
       {/* ✅ Responsive grid */}
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 mt-5 gap-25">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 mt-5 gap-25 ">
         
         {/* ✅ First course card with figure + reserved image dimensions */}
-        <figure className="overflow-hidden rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out">
+        <figure className="overflow-hidden rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-200 h-full ease-in-out">
           <img
             src="https://i.pinimg.com/474x/ae/a8/a4/aea8a4ef38383042b6bf5cee638765b4.jpg"
             alt="Course 1 — React Frontend Essentials"
@@ -35,7 +35,7 @@ const NewCourses = ({setOn}:{setOn: React.Dispatch<React.SetStateAction<boolean>
         </figure>
 
         {/* ✅ Second course card */}
-        <figure className="overflow-hidden rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out mb-24">
+        <figure className="overflow-hidden rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out  h-full ">
           <img
             src="https://wallpapercave.com/wp/wp4218295.jpg"
             alt="Course 2 — Node.js Backend Mastery"
@@ -55,7 +55,9 @@ const NewCourses = ({setOn}:{setOn: React.Dispatch<React.SetStateAction<boolean>
           setOn(prev=>!prev)
         }}>Enroll</Button>
         </figure>
+
       </div>
+    
     </section>
   );
 };
