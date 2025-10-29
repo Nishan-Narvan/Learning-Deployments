@@ -1,18 +1,21 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import slide1 from '../public/wallhaven-nzrvdg.jpg';
+import slide2 from '../public/wallhaven-4v73q5.jpg';
+import slide3 from '../public/wallhaven-pkmxgm.png';
+import slide4 from '../public/wallhaven-yxy71k.png';
 
  const Hero=()=>{
   // STATE: Track which image is currently shown
+  const images = [
+    { url: slide1, alt: 'Slide 1' },
+    { url: slide2, alt: 'Slide 2' },
+    { url: slide3, alt: 'Slide 3' },
+    { url: slide4, alt: 'Slide 4' },
+  ];
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  
-  // Your images array
-  const images = [
-    { url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200', alt: 'Mountain Lake' },
-    { url: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200', alt: 'Forest Path' },
-    { url: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=1200', alt: 'Ocean Sunset' },
-    { url: 'https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=1200', alt: 'Desert Dunes' },
-  ];
   
   // KEY PART 1: THE AUTO-SCROLL ENGINE
   // This runs every 5 seconds and advances to next image
@@ -54,13 +57,13 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
             <img 
               src={img.url} 
               alt={img.alt}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
             {/* Overlay for text */}
-            <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+            <div className="absolute inset bg-opacity-30 flex items-center justify-center">
               <div className="text-center text-white">
                 <h1 className="text-6xl font-bold mb-4">{img.alt}</h1>
-                <p className="text-xl">Slide {idx + 1} of {images.length}</p>
+               
               </div>
             </div>
           </div>
