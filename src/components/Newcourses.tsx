@@ -10,7 +10,7 @@ const NewCourses = ({setOn}:{setOn: React.Dispatch<React.SetStateAction<boolean>
       </h1>
 
       {/* ✅ Responsive grid */}
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 mt-5 gap-30">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 mt-5 gap-25">
         
         {/* ✅ First course card with figure + reserved image dimensions */}
         <figure className="overflow-hidden rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out">
@@ -35,7 +35,7 @@ const NewCourses = ({setOn}:{setOn: React.Dispatch<React.SetStateAction<boolean>
         </figure>
 
         {/* ✅ Second course card */}
-        <figure className="overflow-hidden rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out">
+        <figure className="overflow-hidden rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out mb-24">
           <img
             src="https://wallpapercave.com/wp/wp4218295.jpg"
             alt="Course 2 — Node.js Backend Mastery"

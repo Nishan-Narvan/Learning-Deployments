@@ -24,7 +24,7 @@ function App() {
 
       <div className='flex overflow-y-auto h-screen w-screen flex-col bg-gray-200 items-center relative' >
         {on && <div className='fixed inset-0 z-50 flex items-center justify-center backdrop-blur-md bg-black/20 overflow-auto hide-scrollbar'>
-            <div className='p-15 flex flex-col max-w-[700px] max-h-[90vh] overflow-y-auto hide-scrollbar rounded-2xl justify-center bg-black/70 gap-10 text-white text-3xl relative'>
+            <div className='p-15 flex flex-col max-w-[550px] max-h-[90vh] overflow-y-auto hide-scrollbar rounded-2xl justify-center bg-black/70 gap-10 text-white text-2xl relative'>
             {/* Cancel icon from react-icons/fa */}
             <button
               className='cursor-pointer hover:scale-110 hover:shadow-5xl shadow-md transition-shadow duration-100 absolute right-2 top-3 p-2 text-white'
